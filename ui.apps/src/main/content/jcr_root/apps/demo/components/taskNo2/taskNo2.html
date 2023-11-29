@@ -1,0 +1,80 @@
+<sly data-sly-use.model="com.demo.aem.anime.core.models.Task2Model">
+    <div class="bg">
+       <h2 class="img-title">${model.title}</h2> 
+        <div class="image-container center">
+            <img class="card-img" src="${model.imageReference}" alt="image is not available">
+        </div>   
+    </div>
+
+    <div data-sly-list.card="${model.cards}" class="card_list">
+        <p>discription = ${card.description}</p>
+        <p>url = ${card.linkURL}</p>
+        <p>pic = ${card.fileReference}</p>
+        <div>
+            <img class="cmp-assets__data--img" src="${card.fileReference}" alt="not available" />
+        </div>
+        <div>
+            <p class="cmp-assets__data--desc">${card.description}</p>
+            <a href="${card.linkURL}" target="_blank">
+                link
+            </a>
+        </div>
+    </div>
+</sly>
+<style>
+
+.bg {
+  position: relative;
+}
+
+.image-container {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+}
+
+.image-container img
+{
+    width: 100%;
+}
+
+.img-title {
+  position: absolute;
+  top: 20px; /* Adjust the position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white; /* Set the color to contrast with the background */
+}
+
+.card_list{
+  position: absolute;
+  left: 26%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  margin-top: 300px;
+}
+
+.cmp-assets__data--img {
+     max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 26%;
+    height: 95px;
+}
+
+.cmp-assets__data--desc {
+  font-weight: bold;
+  margin: 0;
+}
+
+.cmp-assets__data--desc + a {
+  display: block;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+</style>

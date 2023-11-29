@@ -1,0 +1,55 @@
+
+/* Center the content */
+.bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: 50%;
+  width: 100%;
+}
+
+/* Style the title */
+.img-title {
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Set text color for visibility */
+  font-size: 24px; /* Adjust font size as needed */
+  padding: 20px;
+  font-weight: bold;
+}
+
+/* Style the card container */
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%; /* Adjust as needed */
+  margin-top: 50%; /* Adjust spacing as needed */
+}
+
+/* Style each card */
+.card {
+  text-align: center;
+}
+
+/* Style the card image */
+.small-image {
+  border-radius: 50%; /* Make it round */
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  object-fit: cover;
+  margin: 10px 0;
+}
+
+/* Style the description and link */
+.cmp-assets__data--desc {
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+a {
+  color: #007bff; /* Link color, you can change it */
+  text-decoration: none;
+}
